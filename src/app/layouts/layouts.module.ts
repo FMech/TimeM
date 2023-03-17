@@ -4,6 +4,7 @@ import { AdminLayoutComponent } from './admin-layout/admin-layout.component';
 import { UserLayoutComponent } from './user-layout/user-layout.component';
 import { RouterModule } from '@angular/router';
 import { CarouselModule } from 'ngx-bootstrap/carousel';
+import { EmployeeLayoutComponent } from './employee-layout/employee-layout.component';
 
 
 
@@ -11,7 +12,8 @@ import { CarouselModule } from 'ngx-bootstrap/carousel';
 @NgModule({
   declarations: [
     AdminLayoutComponent,
-    UserLayoutComponent
+    UserLayoutComponent,
+    EmployeeLayoutComponent
   ],
   imports: [
     CommonModule,

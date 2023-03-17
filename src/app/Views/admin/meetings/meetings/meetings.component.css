@@ -18,4 +18,10 @@ label {
     outline: none;
     border-bottom-color: #49c1a2;
   }
+  td, th {
+    border: 1px solid black;
+  }
+  table td, table th {
+    font-family: Arial, sans-serif;
+  }
   

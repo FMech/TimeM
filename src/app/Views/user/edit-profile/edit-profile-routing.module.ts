@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LogadminComponent } from './logadmin/logadmin.component';
+import { EditProfileComponent } from './edit-profile/edit-profile.component';
 
 const routes: Routes = [
-  {path:'',component:LogadminComponent}
+  {path:'',component:EditProfileComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class LogadminRoutingModule { }
+export class EditProfileRoutingModule { }

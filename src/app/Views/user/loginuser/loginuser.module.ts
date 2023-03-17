@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
 import { LoginuserRoutingModule } from './loginuser-routing.module';
 import { LoginuserComponent } from './loginuser/loginuser.component';
-
+import {HttpClientModule} from "@angular/common/http"
 
 @NgModule({
   declarations: [
@@ -11,7 +11,9 @@ import { LoginuserComponent } from './loginuser/loginuser.component';
   ],
   imports: [
     CommonModule,
-    LoginuserRoutingModule
+    LoginuserRoutingModule,
+    FormsModule,
+    HttpClientModule
   ]
 })
 export class LoginuserModule { }

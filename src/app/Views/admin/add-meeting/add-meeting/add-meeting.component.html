@@ -1,27 +1,32 @@
 
-<section class="vh-100" style="background-color: #e2d5de; max-width: 800px; margin: 0 auto;">
+<section >
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
 
-        <div class="card" style="border-radius: 15px; max-width: 500px;">
-          <div class="card-body p-5">
+        <div class="card shadow-2-strong card-registration bg-gray-100 shadow shadow-lg" style="border-radius: 15px;">
+          <div class="card" style="border-radius: 15px;">
+          <div class="card-body p-5 ">
 
             <h6 class="mb-3">Add Meeting</h6>
             
-  
+            <div class="form-group">
+              <label for="titleInput"></label>
+              <input type="text" class="form-control" id="titleInput" placeholder="Enter meeting title">
+            </div>
+
    <select class="form-control">
-    <option value="option1">Recruitment meetings</option>
-    <option value="option2">Orientation meetings</option>
-    <option value="option3">Performance review meetings</option>
+    <option value="option1">External  meeting</option>
+    <option value="option2">Internal meeting</option>
+   
   </select>
-  
+
     <div class="form-group">
-      <label for="exampleDate">Date</label>
+      <label for="exampleDate"></label>
       <input type="date" class="form-control" id="exampleDate" placeholder="Select date">
     </div>
     <div class="form-group">
-      <label for="exampleTime">Time</label>
+      <label for="exampleTime"></label>
       <input type="time" class="form-control" id="exampleTime" placeholder="Select time">
     </div>
     <div class="form-check">
@@ -31,4 +36,4 @@
 <button type="submit" class="btn btn-danger">Cancel</button>
 
 </div>
-</div></div></div></div> </section>
+</div></div></div></div> </div> </section>

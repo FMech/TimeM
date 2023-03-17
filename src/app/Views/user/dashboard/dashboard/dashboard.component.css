@@ -1,0 +1,19 @@
+#my_chart {
+    width: 300px !important;
+    height: 300px !important;
+  }
+  .chart-container {
+    display: inline-block;
+    margin-right: 40px
+ }
+ #chart-2 {
+    width: 500px !important;
+    height: 300px !important;
+  }
+  .narrow-container {
+    width: 80%;
+  }
+ 
+  
+
+
