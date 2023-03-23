@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-layout.component.css']
 })
 export class UserLayoutComponent {
+  showNav = false;
 
+  toggleNav() {
+    this.showNav = !this.showNav;
+  }
 }
+
+
+
+
+
+
+
+

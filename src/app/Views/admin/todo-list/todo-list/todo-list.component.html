@@ -1,100 +1,38 @@
-<div class="chart-container" style="display: inline-block; margin-right: 40px;">
-  <canvas id="my_chart"></canvas>
-</div>
-<div class="chart-container" style="display: inline-block; margin-left: 40px;">
-  <canvas id="chart-2"></canvas>
-</div>
+<section>
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
 
-<br>
-<section >
-    <div class="container py-5 h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col col-xl-10">
-          <div class="card shadow-2-strong card-registration bg-gray-100 shadow shadow-lg" style="border-radius: 15px;">
-          <div class="card" style="border-radius: 15px;">
-            <div class="card-body p-5">
-  
-              <h6 class="mb-3">My Todo List</h6>
-              <form class="d-flex justify-content-center align-items-center mb-4 custom-form">
-                <div class="form-outline flex-grow-1 me-2">
-                  <input type="text" id="form3" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3">What do you need to do today?</label>
-                </div>
-                <button type="submit" class="btn btn-primary btn-lg ms-2 align-self-center" style="margin-left: 200px;">Add</button>
-              </form>
-              
-              
-              
-              
-              <ul class="list-group mb-0">
-                <li
-                  class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                  <div class="d-flex align-items-center">
-                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-                  Developing and implementing company policies and procedures
-                  </div>
-                  <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-                    <i class="fas fa-times text-primary"></i>
-                  </a>
-                </li>
-                <li
-                  class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                  <div class="d-flex align-items-center">
-                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked />
-                    <s>Review resumes</s>
-                  </div>
-                  <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-                    <i class="fas fa-times text-primary"></i>
-                  </a>
-                </li>
-                <li
-                  class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                  <div class="d-flex align-items-center">
-                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-                    Conduct interviews
-                  </div>
-                  <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-                    <i class="fas fa-times text-primary"></i>
-                  </a>
-                </li>
-                <li
-                  class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                  <div class="d-flex align-items-center">
-                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-                    Process new hire paperwork
-                  </div>
-                  <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-                    <i class="fas fa-times text-primary"></i>
-                  </a>
-                </li>
-                <li
-                  class="list-group-item d-flex d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-0">
-                  <div class="d-flex align-items-center">
-                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." checked />
-                    Recruiting and hiring new employees
-                  </div>
-                  <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-                    <i class="fas fa-times text-primary"></i>
-                  </a>
-                </li>
-                <li
-                  class="list-group-item d-flex justify-content-between align-items-center border-start-0 border-top-0 border-end-0 border-bottom rounded-0 mb-2">
-                  <div class="d-flex align-items-center">
-                    <input class="form-check-input me-2" type="checkbox" value="" aria-label="..." />
-                    Organizing company events and employee engagement activities
-                  </div>
-                  <a href="#!" data-mdb-toggle="tooltip" title="Remove item">
-                    <i class="fas fa-times text-primary"></i>
-                  </a>
-                </li>
-              </ul>
-  
+        <div class="card shadow-lg bg-gray-100">
+          <div class="card-body p-5 ">
+            <h5 style="color: rgb(3, 3, 90);">Todo List</h5>
+            <br>
+
+            <div class="form-group">
+              <input type="text" [(ngModel)]="newTaskDescription" placeholder="Enter task">
+              <button class="btn btn-primary" (click)="addTask()">Add Task</button>
             </div>
+
+            <br>
+            <br>
+
+            <ul>
+              <li *ngFor="let task of tasks" [class.completed]="task.completed">
+                <div>
+                  <input class="checkbox" type="checkbox" [(ngModel)]="task.completed" (change)="toggleComplete(task)">
+                  <span *ngIf="!task.editing">{{ task.description }}</span>
+                  <input type="text" *ngIf="task.editing" [(ngModel)]="task.description">
+                </div>
+                <div class="task-btn-group">
+                  <button class="btn task-btn edit" (click)="editTask(task)">Edit</button>
+                  <button class="btn task-btn delete" (click)="deleteTask(task)">Delete</button>
+                </div>
+              </li>
+            </ul>
           </div>
-  
         </div>
+
       </div>
     </div>
-    </div>
-  </section>
-  
+  </div>
+</section>

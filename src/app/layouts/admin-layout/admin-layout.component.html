@@ -14,35 +14,44 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" routerLink="/user/dashboard">
+            <a class="nav-link" routerLink="/admin/dashboard">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" routerLink="/user/profile">
+            <a class="nav-link" routerLink="/admin/Employees">
                 <i class="fas fa-fw fa-users"></i>
-                <span>Profile</span></a>
+                <span>Employees</span></a>
 
         <!-- Nav Item - Charts -->
+       
         <li class="nav-item">
-            <a class="nav-link" routerLink="/user/EditProfile">
+            <a class="nav-link" routerLink="/admin/meetings">
                 <i class="fas fa-fw fa-users"></i>
-                <span>Edit Profile</span></a>
+                <span> Meetings</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/admin/addMeeting">
+                <i class="fas fa-fw fa-users"></i>
+                <span>  Add meeting </span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/admin/todolist">
+                <i class="fas fa-fw fa-users"></i>
+                <span> Todo List</span></a>
         </li>
         
         <li class="nav-item">
-            <a class="nav-link" routerLink="/user/vacation">
-                <i class="fas fa-fw fa-users"></i>
-                <span> Vacation Request</span></a>
-        </li>
-        
-        <li class="nav-item">
-            <a class="nav-link" routerLink="/user/timetracking">
+            <a class="nav-link" routerLink="/admin/timetracking">
                 <i class="fas fa-fw fa-users"></i>
                 <span> Time Tracking</span></a>
         </li>
-        
+        <li class="nav-item">
+            <a class="nav-link" routerLink="/admin/recruitment">
+                <i class="fas fa-fw fa-users"></i>
+                <span> Recruitments</span></a>
+        </li>
 
 
         <!-- Divider -->
@@ -89,58 +98,51 @@
 
                     <li class="nav-item dropdown">
                         <a class="nav-link" data-toggle="dropdown" href="#">
-                          <i class="far fa-comments"></i>
+                          <i class="far fa-comments" style="color: black;"></i>
                           <span class="badge badge-danger navbar-badge">3</span>
                         </a>
                         <li class="nav-item dropdown">
                             <a class="nav-link" data-toggle="dropdown" href="#">
-                              <i class="far fa-bell"></i>
+                              <i class="far fa-bell" style="color: black;"></i>
                               <span class="badge badge-warning navbar-badge">15</span>
-                            </a>
-
-                    <!-- Nav Item - User Information -->
-                    <li class="nav-item dropdown no-arrow">
-                        <a routerLink="/" > Logout</a>
-                        <!-- Dropdown - User Information -->
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                            aria-labelledby="userDropdown">
-
-                            <button class="dropdown-item" >
-                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                Logout
-                            </button>
-                        </div>
-                    </li>
-
-                </ul>
-
-            </nav>
-            <!-- End of Topbar -->
-
-            <!-- Begin Page Content -->
-            <router-outlet></router-outlet>
-            <!-- /.container-fluid -->
-
-        </div>
-        <!-- End of Main Content -->
-
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Time Master2023</span>
+                           
+        
+                                    <button class="dropdown-item" >
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-black " style="color: black;" routerLink="/"></i>
+                                        
+                                    </button>
+                                </a>
+                            </li>
+        
+                        </ul>
+        
+                    </nav>
+                    <!-- End of Topbar -->
+        
+                    <!-- Begin Page Content -->
+                    <router-outlet></router-outlet>
+                    <!-- /.container-fluid -->
+        
                 </div>
+                <!-- End of Main Content -->
+        
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; Time Master2023</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
+        
             </div>
-        </footer>
-        <!-- End of Footer -->
-
-    </div>
-    <!-- End of Content Wrapper -->
-
-</div>
-<!-- End of Page Wrapper -->
-
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" >
-    <i class="fas fa-angle-up"></i>
-</a>
+            <!-- End of Content Wrapper -->
+         
+        </div>
+        <!-- End of Page Wrapper -->
+        
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" >
+            <i class="fas fa-angle-up"></i>
+        </a>

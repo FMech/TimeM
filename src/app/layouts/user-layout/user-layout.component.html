@@ -7,19 +7,14 @@
     </a>
 
     <nav id="navbar" class="navbar">
-      <ul>
+      <ul [ngClass]="{'show': showNav}">
         <li><a class="nav-link scrollto active" href="/">Home</a></li>
         <li><a class="nav-link scrollto" href="/signupuser">Signup</a></li>
         <li><a class="nav-link scrollto" href="/loginuser">Login</a></li>
-       
-       
-         
-        
-        <li><a class="getstarted scrollto" href="/signupuser">Signup</a></li>
       </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
+      <i class="bi bi-list mobile-nav-toggle" (click)="toggleNav()"></i>
     </nav><!-- .navbar -->
 
-  </div>  
+  </div>
 </header>
 <router-outlet></router-outlet>
